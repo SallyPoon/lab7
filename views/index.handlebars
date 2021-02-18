@@ -26,14 +26,16 @@ ga('send', 'pageview');
 </head>
 
 <body>
+	{{#if viewAlt}}
+			Min! <button class="likeBtn">Like</button>
+	{{else}}
 	<div class="container">
 		<div class="jumbotron">
 			<h1>Michael Bernstein</h1>
 			<p>human-computer interaction &middot; social computing &middot; crowdsourcing</p>
 		</div>
-
 		<h4>Projects</h4>
-		{{#each projects}}
+			{{#each projects}}
 			<div class="project" id="{{id}}">
 				<div class="thumbnail">
 					<a href="/project/{{id}}">
@@ -44,7 +46,8 @@ ga('send', 'pageview');
 					<div class="details"></div>
 				</div>
 			</div>
-		{{/each}}
+			{{/each}}
+			{{/if}}
 
 
 </body>
